@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import FAQSection from './components/FAQSection'
+import ContactHelp from './components/ContactHelp'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="app">
+      <header className="header">
+        <h1>MyUniversityBuddy</h1>
+        <p>Your simple student dashboard</p>
+      </header>
+
+      <section className="hero">
+        <h2>Welcome, Student!</h2>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          This dashboard helps you quickly access common university information,
+          support details, and frequently asked questions.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </section>
+
+      <section className="card-grid">
+        <div className="card">
+          <h3>Student</h3>
+          <p>Name: Larra Student</p>
+          <p>Student ID: 2023-01707</p>
+          <p>Program: BSICT</p>
+          <p>Year Level: 3rd Year</p>
+        </div>
+
+        <div className="card">
+          <h3>Today’s Reminder</h3>
+          <p>Check class updates and prepare your study tasks.</p>
+        </div>
+
+        <div className="card">
+          <h3>Quick Access</h3>
+          <p>View FAQs and school contact details below.</p>
+        </div>
+      </section>
+
+      <FAQSection />
+      <ContactHelp />
+    </div>
   )
 }
 

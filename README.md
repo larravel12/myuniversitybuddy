@@ -1,73 +1,131 @@
-# React + TypeScript + Vite
+# Assignment 1: Implement Two Small Features in MyUniversityBuddy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Student Information
 
-Currently, two official plugins are available:
+Name: Larra Student
+Student ID: 2023-01707
+Program: BSICT
+Year Level: 3rd Year
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+MyUniversityBuddy is a simple student dashboard application that helps students access useful university information. The application runs locally and provides easy access to common questions and support contact information.
 
-## Expanding the ESLint configuration
+The interface includes a dashboard layout with student information, reminders, and quick access sections to make the application more organized and user-friendly.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Features Implemented
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 1. FAQ Section
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Purpose
+
+The FAQ section helps students quickly find answers to common university-related questions without needing to contact support.
+
+### Expected User
+
+Students using the MyUniversityBuddy application.
+
+### Main Functionality
+
+The section displays a list of frequently asked questions and their corresponding answers.
+
+### Acceptance Criteria
+
+1. The FAQ section displays at least three questions and answers.
+2. The information is clearly readable and organized.
+3. The feature works locally without needing an internet connection.
+
+---
+
+## 2. Contact / Help Page
+
+### Purpose
+
+The Contact / Help section provides important contact information for students who need assistance from the university.
+
+### Expected User
+
+Students who need help, support, or contact details for university services.
+
+### Main Functionality
+
+Displays contact information including email address, phone number, office location, and office hours.
+
+### Acceptance Criteria
+
+1. The page displays at least one email address.
+2. The page displays a phone number and office location.
+3. The feature works locally without requiring internet access.
+
+---
+
+# Additional Interface Components
+
+The application uses a simple dashboard layout that includes:
+
+* Student information card
+* Today's reminder card
+* Quick access card
+
+These components help organize the application and improve usability but are not counted as the two main features required for the assignment.
+
+---
+
+# What Was Implemented
+
+The application was built using React with TypeScript and Vite. The project includes a clean dashboard interface where students can view their information, reminders, and quick links. The two main features implemented are the FAQ Section and the Contact / Help Page, both integrated directly into the dashboard.
+
+The application runs locally and does not rely on an internet connection.
+
+---
+
+# Problems or Challenges Encountered
+
+During development, there were some issues with component imports and CSS errors. These were resolved by organizing the project structure properly and ensuring files were placed inside the correct folders.
+
+Another challenge was improving the layout so the application would look organized and user-friendly. This was solved by adding a dashboard-style layout with cards and sections.
+
+---
+
+# Screenshots
+
+Screenshots of the application showing the implemented features are included in the project.
+
+Examples include:
+
+* Dashboard interface
+* FAQ Section
+* Contact / Help Page
+
+---
+
+# How to Run the Project
+
+1. Install dependencies
+
+```
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm run dev
+```
+
+3. Open the application in the browser
+
+```
+http://localhost:5173
+```
+
+---
+
+# Repository
+
+GitHub Repository:
+https://github.com/larravel12/myuniversitybuddy
